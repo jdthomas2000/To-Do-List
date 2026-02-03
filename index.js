@@ -19,6 +19,7 @@ myButton.addEventListener("click", () => {
 
 //console.log(listContainer);
 let updateList = () => {
+  //using DOM to create list items under our unstructured list
   listContainer.innerHTML = "";
   toDoList.forEach((item, index) => {
     const listItem = document.createElement("li");
@@ -27,27 +28,30 @@ let updateList = () => {
     listContainer.append(listItem);
     // console.log(listContainer);
 
-    listItem.addEventListener("click", () => {
+    listItem.addEventListener("dblclick", () => {
       // remove list items that we clicked on then rerun updateList with an updated to do list without the list item we clicked on
       let removedItems = toDoList.splice(index, 1);
       removedItems.forEach((item) => {
         removedelements.push(item);
       });
+      //using DOM to create list items under our unstructured list
       completedlistContainer.innerHTML = "";
       removedelements.forEach((item) => {
         const listItem = document.createElement("li");
         listItem.textContent = item;
-        listItem.classList.add('completedLi')
+        listItem.classList.add("completedLi");
 
         completedlistContainer.append(listItem);
       });
-
       updateList();
+    });
+    listItem.addEventListener("click", () => {
+      listItem.classList.add("strikethrough");
     });
   });
   const list = document.querySelector("ul");
 
-  list.addEventListener("click", (completedList) => {
+  list.addEventListener("dblclick", (completedList) => {
     // remove clicked on item from the html file
     completedList.target.remove();
   });

@@ -5,6 +5,7 @@ body {
 #box {
   display: flex;
   flex-direction: column;
+  text-align: center;
   /* background-color: aqua; */
 }
 #toDoBox {
@@ -16,7 +17,7 @@ body {
 
 #mainTitle {
   text-align: center;
-  padding-top: 15%;
+  /* padding-top: 15%; */
   color:red;
 }
 input {
@@ -82,4 +83,6 @@ footer {
   }
 }
 
-
+.strikethrough{
+     text-decoration: line-through
+}
