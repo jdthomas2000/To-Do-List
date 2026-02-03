@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+#box {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+}
+#toDoBox {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+#mainTitle {
+  text-align: center;
+  padding-top: 15%;
+  color:red;
+}
+input {
+  text-align: center;
+  width: 20%;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+}
+li:hover {
+  background-color: greenyellow;
+}
+
+.completedLi:hover {
+  background-color: red;
+}
+
+img {
+  height: 25%;
+  width: 25%;
+  display: block;
+  margin: auto;
+
+  /* text-align: center; */
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* height: 200px; */
+  /* background-color: blue; */
+}
+
+/* background-color: yellow; */
+
+#footerTitle {
+  color: greenyellow;
+}
+.shadow-dance-text {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow:
+    5px 5px 0 #ff005e,
+    10px 10px 0 #00d4ff;
+  animation: shadow-dance 2s infinite;
+}
+
+@keyframes shadow-dance {
+  0%,
+  100% {
+    text-shadow:
+      5px 5px 0 #ff005e,
+      10px 10px 0 #00d4ff;
+  }
+  50% {
+    text-shadow:
+      -5px -5px 0 #00d4ff,
+      -10px -10px 0 #ff005e;
+  }
+}
+
+
